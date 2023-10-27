@@ -45,7 +45,7 @@ array2 = np.array([2, 1, 0])
 covariance_matrix = np.cov(array1, array2)
 print(f"Covariance matrix of the said arrays:\n{covariance_matrix}")
 
-# Question 7
+# Question no. 7
 import math
 
 C = 50
