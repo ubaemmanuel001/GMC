@@ -9,22 +9,27 @@ def factorial(n):
     else:
         return n * factorial(n-1)
 
-result = factorial(5)
-print(f"The factorial of 5 is: {result}")
+n = int(input("Enter a number to calculate its factorial: "))
+result = factorial(n)
+print(f"The factorial of {n} is: {result}")
 
 # Question 3
 def generate_dict(n):
     result_dict = {i: i*i for i in range(1, n+1)}
     return result_dict
 
-output_dict = generate_dict(8)
+n = int(input("Enter a number: "))
+output_dict = generate_dict(n)
 print(output_dict)
 
 # Question 4
 def missing_char(word, n):
     return word[:n] + word[n+1:]
 
-result = missing_char('kitten', 1)
+word = input("Enter a word: ")
+n = int(input(f"Enter the index (0 to {len(word)-1}): "))
+
+result = missing_char(word, n)
 print(result)
 
 # Question 5
@@ -39,6 +44,8 @@ print("\nArray to list:")
 print(list_structure)
 
 # Question 6
+import numpy as np
+
 array1 = np.array([0, 1, 2])
 array2 = np.array([2, 1, 0])
 
@@ -52,5 +59,5 @@ C = 50
 H = 30
 D_values = [int(val) for val in input("Enter comma-separated values of D: ").split(',')]
 
-results = [int(math.sqrt((2 * C * D) / H)) for D in D_values]
+results = [round(math.sqrt((2 * C * D) / H)) for D in D_values]
 print(results)
